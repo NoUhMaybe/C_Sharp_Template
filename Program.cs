@@ -11,6 +11,10 @@ namespace ProjectTemplate
 
             MethodTemplate();
 
+            ClassTemplate test = new ClassTemplate();
+
+            test.Today();
+
             Console.ReadKey();
 
         }
@@ -31,6 +35,11 @@ namespace ProjectTemplate
             public int Sum()
             {
                 return Num1 + Num2 + Num3;
+            }
+
+            public void Today()
+            {
+                Console.WriteLine($"Today is {DateTime.Now.DayOfWeek}! I cant wait for {DateTime.Now.AddDays(3).DayOfWeek}, I have lunch planned!");
             }
 
         }
