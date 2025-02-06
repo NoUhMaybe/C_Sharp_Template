@@ -18,6 +18,12 @@ namespace ProjectTemplate
         {
             Console.WriteLine("Hello AGAIN World!");
         }
+
+        class ClassTemplate
+        {
+            public int Num { get; set; }
+
+        }
     }
 }
 
