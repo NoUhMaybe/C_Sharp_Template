@@ -11,9 +11,7 @@ namespace ProjectTemplate
 
             MethodTemplate();
 
-            ClassTemplate test = new ClassTemplate();
-
-            test.Today();
+            ClassTemplate.Today();
 
             Console.ReadKey();
 
@@ -26,7 +24,7 @@ namespace ProjectTemplate
         }
 
 
-        class ClassTemplate
+        public class ClassTemplate
         {
             public int Num1 { get; set; }
             public int Num2 { get; init; } //Can only be set inside an object initializer after construction
@@ -37,11 +35,10 @@ namespace ProjectTemplate
                 return Num1 + Num2 + Num3;
             }
 
-            public void Today()
+            public static void Today() //"static" - Has to be called by the class itself not on an instance
             {
                 Console.WriteLine($"Today is {DateTime.Now.DayOfWeek}! I cant wait for {DateTime.Now.AddDays(3).DayOfWeek}, I have lunch planned!");
             }
-
         }
     }
 }
